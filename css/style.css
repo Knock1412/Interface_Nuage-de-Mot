@@ -1,0 +1,180 @@
+/* -------------------------------------------------------------------------
+   STYLE CYBORG ADAPTÉ (Basé sur TemplateMo 579)
+   ------------------------------------------------------------------------- */
+
+/* 1. FONTS & RESET */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1f2122; /* Fond noir profond */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+a { text-decoration: none; transition: all 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* 2. STRUCTURE GLOBALE (Identique au template) */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page-content {
+  margin-top: 100px; /* Espace pour le header */
+  background-color: #27292a; /* La "carte" grise principale */
+  padding: 60px;
+  border-radius: 23px;
+  min-height: 80vh;
+}
+
+/* 3. HEADER (Simplifié mais look identique) */
+header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 80px;
+  z-index: 100;
+  background-color: #1f2122; /* Fond sombre header */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.logo img { vertical-align: middle; margin-right: 10px; }
+.logo span { color: #e75e8d; } /* Le rose Cyborg */
+
+/* 4. TITRES & TEXTES */
+.heading-section h4 {
+  color: #e75e8d; /* Rose */
+  font-size: 34px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.heading-section h4 em {
+  color: #fff;
+  font-style: normal;
+  text-decoration: underline;
+}
+
+/* 5. INPUT & FORMULAIRES (Adapté au style "Carte Sombre") */
+.input-card {
+  background-color: #1f2122; /* Fond plus sombre pour le contraste */
+  border-radius: 23px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+textarea {
+  width: 100%;
+  background-color: #27292a; /* Fond gris clair */
+  border: 1px solid #333;
+  border-radius: 23px;
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  padding: 20px;
+  resize: vertical;
+  transition: all 0.3s;
+}
+
+textarea:focus {
+  border-color: #e75e8d; /* Bordure rose au clic */
+  color: #fff;
+}
+
+textarea::placeholder { color: #666; }
+
+/* 6. BOUTONS (Le style exact ".main-button") */
+.main-button button {
+  font-size: 14px;
+  color: #fff;
+  background-color: #e75e8d;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.main-button button:hover {
+  background-color: #fff;
+  color: #e75e8d;
+}
+
+/* 7. ZONE RESULTAT (Style ".gaming-library") */
+.result-card {
+  margin-top: 40px;
+  background-color: #1f2122;
+  border-radius: 23px;
+  padding: 30px;
+}
+
+.cloud-container {
+  background-color: #ffffff; /* BLANC au lieu de gris sombre */
+  border-radius: 23px;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.1); /* Petite ombre interne pour le style */
+}
+
+.btn-download {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-download button {
+  background-color: transparent;
+  border: 1px solid #e75e8d;
+  color: #e75e8d;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-download button:hover {
+  background-color: #e75e8d;
+  color: #fff;
+}
+
+.btn-download button i {
+    margin-right: 8px;
+}
+
+/* 8. MESSAGES D'ERREUR */
+.alert-box {
+  background-color: rgba(231, 94, 141, 0.2);
+  border: 1px solid #e75e8d;
+  color: #fff;
+  padding: 15px;
+  border-radius: 23px;
+  margin-bottom: 20px;
+  text-align: center;
+}
