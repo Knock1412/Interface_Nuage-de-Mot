@@ -29,17 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 2. Découpage
         $tab_mots = fragmenter($texte_a_traiter);
 
-        // 3. Filtrage Mots-Vides
+         // 3. Filtrage des Mots-Vides
         if (file_exists('data/mots-vides.txt')) {
             
-            $contenu_fichier = file_get_contents('data/mots-vides.txt');
+            $mots_vides = file('data/mots-vides.txt');
             
-            $contenu_utf8 = mb_convert_encoding($contenu_fichier, 'UTF-8', 'Windows-1252');
-            
-            $mots_vides = preg_split("/\r\n|\n|\r/", $contenu_utf8);
-
             $mots_vides = array_map('trim', $mots_vides);
-        
+            
             $tab_mots = array_diff($tab_mots, $mots_vides);
         }
 
@@ -126,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <div class="result-card">
                 
                 <div class="heading-section">
-                    <h4><em>RésultatDu Traitement</em> </h4>
+                    <h4><em>Résultat Du Traitement</em> </h4>
                 </div>
 
                 <?php if($message_erreur): ?>
